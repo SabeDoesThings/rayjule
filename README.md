@@ -20,11 +20,17 @@ Once you have that create a `main.jule` file and put this code:
 use "<module name>/rayjule"
 
 fn main() {
-   rayjule::InitWindow(800, 600, "raylib example")
+   const screenWidth = 800
+   const screenHeight = 450
+
+   rayjule::InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window")
+
+   rayjule::SetTargetFPS(60)
 
    for !rayjule::WindowShouldClose() {
       rayjule::BeginDrawing()
-      rayjule::ClearBackground(rayjule::Color{255, 255, 255, 255})
+         rayjule::ClearBackground(rayjule::RAYWHITE)
+         rayjule::DrawText("Congrats! You created your first window!", 190, 200, 20, rayjule::LIGHTGRAY);
       rayjule::EndDrawing()
    }
 
