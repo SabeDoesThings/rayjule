@@ -16,7 +16,7 @@ This is has all the compiler flags needed to run on Windows.
 There currently is not one for Linux or Mac OS because it has not been tested on those platforms at the moment.
 
 Once you have that create a `main.jule` file and put this code:
-```rust
+```v
 use "<module name>/rayjule"
 
 fn main() {
