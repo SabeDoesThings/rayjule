@@ -18,24 +18,24 @@ There currently is not one for Linux or Mac OS because it has not been tested on
 
 Once you have that create a `main.jule` file and put this code:
 ```v
-use "<module name>/rayjule"
+use rl "<module name>/rayjule"
 
 fn main() {
    const screenWidth = 800
    const screenHeight = 450
 
-   rayjule::InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window")
+   rl::InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window")
 
-   rayjule::SetTargetFPS(60)
+   rl::SetTargetFPS(60)
 
-   for !rayjule::WindowShouldClose() {
-      rayjule::BeginDrawing()
-         rayjule::ClearBackground(rayjule::RAYWHITE)
-         rayjule::DrawText("Congrats! You created your first window!", 190, 200, 20, rayjule::LIGHTGRAY)
-      rayjule::EndDrawing()
+   for !rl::WindowShouldClose() {
+      rl::BeginDrawing()
+         rl::ClearBackground(rl::RAYWHITE)
+         rl::DrawText("Congrats! You created your first window!", 190, 200, 20, rl::LIGHTGRAY)
+      rl::EndDrawing()
    }
 
-   rayjule::CloseWindow()
+   rl::CloseWindow()
 }
 ```
 Then just do `julec build .` and it should run.
