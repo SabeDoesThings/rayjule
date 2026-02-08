@@ -3,7 +3,7 @@
 Raylib bindings for [Jule](https://jule.dev/) v0.2.0
 
 > [!WARNING]
-> This is still a WIP and has only been tested on windows so far so be aware. If you are on a different OS and want to help contributions are welcome
+> This is still a WIP and has only been tested on Windows so far, so please be aware. If you’re on a different OS and want to help, contributions are welcome.
 
 ## Getting Started
 First make sure you have the latest version of [Jule](https://jule.dev/downloads) installed. 0.2.0 is the latest at the time of writing.
