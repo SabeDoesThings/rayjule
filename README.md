@@ -1,6 +1,6 @@
 ![rayjulelogo](rayjulelogo.png)
 # rayjule
-Raylib bindings for the Jule programming language.
+Raylib bindings for [Jule](https://jule.dev/) v0.2.0
 
 > [!WARNING]
 > This is still a WIP and has only been tested on windows so far so be aware. If you are on a different OS and want to help contributions are welcome
