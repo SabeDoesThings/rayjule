@@ -31,7 +31,7 @@ fn main() {
    for !rayjule::WindowShouldClose() {
       rayjule::BeginDrawing()
          rayjule::ClearBackground(rayjule::RAYWHITE)
-         rayjule::DrawText("Congrats! You created your first window!", 190, 200, 20, rayjule::LIGHTGRAY);
+         rayjule::DrawText("Congrats! You created your first window!", 190, 200, 20, rayjule::LIGHTGRAY)
       rayjule::EndDrawing()
    }
 
