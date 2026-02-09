@@ -52,3 +52,4 @@ Examples Todo:
 - [ ] core_3d_camera_fps
 - [ ] models_first_person_maze
 - [ ] audio_music_stream
+- [ ] games_floppy
