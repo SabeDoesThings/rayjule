@@ -44,9 +44,11 @@ Then just do `julec build .` and it should run.
 You can find more examples in the [examples](https://github.com/SabeDoesThings/rayjule/tree/main/examples) folder.
 
 Examples Todo:
-- [x] sprite_animation
-- [ ] background_scrolling
-- [ ] 2d_camera
-- [ ] 2d_camera_platformer
-- [ ] 3d_camera_first_person
-- [ ] 3d_camera_fps
+- [x] textures_sprite_animation
+- [ ] textures_background_scrolling
+- [ ] core_2d_camera
+- [ ] core_2d_camera_platformer
+- [ ] core_3d_camera_first_person
+- [ ] core_3d_camera_fps
+- [ ] models_first_person_maze
+- [ ] audio_music_stream
