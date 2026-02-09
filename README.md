@@ -45,7 +45,7 @@ You can find more examples in the [examples](https://github.com/SabeDoesThings/r
 
 Examples Todo:
 - [x] textures_sprite_animation
-- [ ] textures_background_scrolling
+- [x] textures_background_scrolling
 - [ ] core_2d_camera
 - [ ] core_2d_camera_platformer
 - [ ] core_3d_camera_first_person
