@@ -2,8 +2,8 @@
 #pass "-DNOMINMAX"
 #pass "-DNOGDI"
 #pass "-DNOUSER"
-#pass "-Iinclude"
-#pass "-Llib"
+#pass "-Irayjule/include"
+#pass "-Lrayjule/lib"
 #pass "-lraylib"
 #pass "-lopengl32"
 #pass "-lgdi32"
@@ -15,4 +15,5 @@
 #pass "-Wl,/NODEFAULTLIB:libcmt"       // Exclude static C runtime
 #pass "-lucrt"          // Use dynamic UCRT import library
 #pass "-lvcruntime"     // Use dynamic VC runtime import library
+
 #pass "-lmsvcrt"        // Use dynamic C runtime import library
