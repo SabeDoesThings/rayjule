@@ -1,5 +1,5 @@
-#pass "-Iinclude"
-#pass "-Llib"
+#pass "-Irayjule/include"
+#pass "-Lrayjule/lib"
 #pass "-lraylib"
 #pass "-lGL"
 #pass "-lm"
@@ -7,3 +7,4 @@
 #pass "-ldl"
 #pass "-lrt"
 #pass "-lX11"
+
