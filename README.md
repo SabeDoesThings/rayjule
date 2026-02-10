@@ -12,9 +12,9 @@ Once you have that clone this repository
 ```
 git clone https://github.com/SabeDoesThings/rayjule
 ```
-and copy the windows.jule file into your main directory.
+and copy the `windows.jule` file into your main directory.
 This is has all the compiler flags needed to run on Windows.
-There currently is not one for Linux or Mac OS because it has not been tested on those platforms at the moment.
+This applies to the linux as well and all that is different is you use the `linux.jule` instead
 
 Once you have that create a `main.jule` file and put this code:
 ```v
