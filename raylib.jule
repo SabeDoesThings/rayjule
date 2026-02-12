@@ -350,8 +350,11 @@ extern struct Wave {
 
 type Wave = extern.Wave
 
+extern type rAudioBuffer: uintptr
 type rAudioBuffer = extern.rAudioBuffer
-type rAudioProcessor = extern rAudioProcessor
+
+extern type rAudioProcessor: uintptr
+type rAudioProcessor = extern.rAudioProcessor
 
 #typedef
 extern struct AudioStream {
@@ -362,11 +365,15 @@ extern struct AudioStream {
 	channels: u32
 }
 
+type AudioStream = extern.AudioStream
+
 #typedef
 extern struct Sound {
 	stream: AudioStream
 	frameCount: u32
 }
+
+type Sound = extern.Sound
 
 #typedef
 extern struct Music {
@@ -376,6 +383,8 @@ extern struct Music {
 	ctxType: int
 	ctxData: *extern.Void
 }
+
+type Music = extern.Music
 
 #typedef
 extern struct VrStereoConfig {
@@ -3070,9 +3079,9 @@ fn CloseAudioDevice() {
 }
 
 // RLAPI Sound LoadSound(const char *fileName);                          // Load sound from file
-extern unsafe fn LoadSound(fileName: *extern.Char)
+extern unsafe fn LoadSound(fileName: *extern.char)
 fn LoadSound(fileName: str) {
-	unsafe { extern.LoadSound(fileName: str) }
+	unsafe { extern.LoadSound(strToCharPtr(fileName)) }
 }
 
 // RLAPI void UnloadSound(Sound sound);                                  // Unload sound
@@ -3084,7 +3093,7 @@ fn UnloadSound(sound: Sound) {
 // RLAPI void PlaySound(Sound sound);                                    // Play a sound
 extern unsafe fn PlaySound(sound: Sound)
 fn PlaySound(sound: Sound) {
-	unsafe { extern.PlaySound(sound: Sound) }
+	unsafe { extern.PlaySound(sound) }
 }
 
 // RLAPI void StopSound(Sound sound);                                    // Stop playing a sound
@@ -3105,44 +3114,26 @@ fn SetSoundVolume(sound: Sound, volume: f32) {
 	unsafe { extern.SetSoundVolume(sound, volume) }
 }
 
-// RLAPI Music LoadMusicStream(const char *fileName);                    // Load music stream from file
-extern unsafe fn LoadMusicStream(fileName: *extern.Char)
-fn LoadMusicStream(fileName: *extern.Char) {
-	unsafe { extern.LoadMusicStream(fileName) }
+// RLAPI Music LoadMusicStream(const char *fileName);
+extern unsafe fn LoadMusicStream(fileName: *extern.char): Music
+fn LoadMusicStream(fileName: str): Music {
+	ret unsafe { extern.LoadMusicStream(strToCharPtr(fileName)) }
 }
 
-// RLAPI void UnloadMusicStream(Music music);                            // Unload music stream
-extern unsafe fn UnloadSound(music: Music)
-fn UnloadSound(music: Music) {
-	unsafe { extern.UnloadSound(music) }
+// RLAPI void UnloadMusicStream(Music music);
+extern unsafe fn UnloadMusicStream(music: Music)
+fn UnloadMusicStream(music: Music) {
+	unsafe { extern.UnloadMusicStream(music) }
 }
 
-// RLAPI void StopMusicStream(Music music);                              // Stop music playing
-extern unsafe fn PlaySound(music: Music)
-fn PlaySound(music: Music) {
-	unsafe { extern.PlaySound(music: Music) }
+// RLAPI void PlayMusicStream(Music music);
+extern unsafe fn PlayMusicStream(music: Music)
+fn PlayMusicStream(music: Music) {
+	unsafe { extern.PlayMusicStream(music) }
 }
 
-// RLAPI void PauseMusicStream(Music music);                             // Pause music playing
-extern unsafe fn PauseMusicStream(music: Music)
-fn PauseMusicStream(music: Music) {
-	unsafe { extern.PauseMusicStream(music) }
-}
-
-// RLAPI void ResumeMusicStream(Music music);                            // Resume playing paused music
-extern unsafe fn ResumeMusicStream(music: Music)
-fn ResumeMusicStream(music: Music) {
-	unsafe { extern.ResumeMusicStream(music) }
-}
-
-// RLAPI bool IsMusicStreamPlaying(Music music);                         // Check if music is playing
-extern unsafe fn IsMusicStreamPlaying(music: Music)
-fn IsMusicStreamPlaying(music: Music) {
-	unsafe { extern.IsMusicStreamPlaying(music) }
-}
-
-// RLAPI void SetMusicVolume(Music music, float volume);                 // Set volume for music (1.0 is max level)
-extern unsafe fn SetMusicVolume(music: Music, volume: f32)
-fn SetMusicVolume(music: Music, volume: f32) {
-	unsafe { extern.SetMusicVolume(music, volume) }
+// RLAPI void StopMusicStream(Music music);
+extern unsafe fn StopMusicStream(music: Music)
+fn StopMusicStream(music: Music) {
+	unsafe { extern.StopMusicStream(music) }
 }
