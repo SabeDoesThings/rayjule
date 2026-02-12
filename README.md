@@ -10,7 +10,7 @@ First make sure you have the latest version of [Jule](https://jule.dev/downloads
 Then create a new folder and create a Jule module via `julec mod init <module name>`
 Once you have that clone this repository
 ```
-git clone https://github.com/SabeDoesThings/rayjule
+git clone https://github.com/jule-gamedev/rayjule
 ```
 and copy the `windows.jule` file into your main directory.
 This is has all the compiler flags needed to run on Windows.
