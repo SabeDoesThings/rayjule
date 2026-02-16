@@ -3,6 +3,7 @@ extern use "rayjule/main.hpp"
 
 use "std/math"
 use "std/jule"
+use "std/integ"
 
 const PI: f32=3.14159265358979323846
 const EPSILON: f32=0.000001
@@ -836,7 +837,7 @@ fn ConvertBytesToVoidPtr(bytes: *extern.char): Void {
 }
 
 unsafe fn strToCharPtr(s: str): *extern.char {
-	ret (*extern.char)(&s[0])
+	ret (*extern.char)(&integ::BytesFromStr(s)[0])
 }
 
 unsafe fn ptrCharToStr(c: *extern.char): str {
